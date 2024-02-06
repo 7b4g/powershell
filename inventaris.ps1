@@ -1,3 +1,6 @@
+# Get info from PC: FIO, programs (ex. office 2013), processor, monitors, RAM, hard drive, PC name, PC model, OS
+# Before stating, check all comments and values
+
 # Params
 
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
@@ -224,5 +227,5 @@ $res = $content -replace $re, ""
 # $iconTest = Test-Path $savePath
 # if ($iconTest -eq "True"){Remove-item ($iconPath)}else{return}
 
-# Sometimes powershell create zombie process so ...
+# Powershell create zombie-like process so ...
 (Get-Process -Name powershell).Kill()
